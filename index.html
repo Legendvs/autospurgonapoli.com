@@ -91,6 +91,18 @@ footer{padding-bottom:100px}
 .sticky{display:flex;position:fixed;bottom:0;left:0;right:0;background:white;padding:12px;gap:10px;box-shadow:0 -3px 20px #102b4020}
 .sticky .btn{flex:1}
 }
+
+/* Wordmark inspired by the supplied reference. */
+.brand{display:inline-flex;flex-direction:column;gap:7px;width:290px;max-width:100%;flex-shrink:0}
+.brand-title{display:flex;justify-content:space-between;gap:6px;font-family:Arial,sans-serif;font-size:24px;font-weight:900;letter-spacing:-1px;line-height:1;white-space:nowrap;color:#06265e}
+.brand-title span{color:#0072ff}
+.brand-subtitle{display:flex;align-items:center;gap:8px;font-size:9px;font-weight:800;letter-spacing:2px;white-space:nowrap;color:#06265e}
+.brand-subtitle::before,.brand-subtitle::after{content:"";flex:1;height:3px;background:#f57525}
+footer .brand{margin-bottom:16px}
+footer .brand-title,footer .brand-subtitle{color:#fff}
+@media(max-width:950px){header nav{gap:14px;font-size:12px}}
+@media(max-width:750px){header .brand{width:215px}header .brand-title{font-size:18px}header .brand-subtitle{font-size:7px;letter-spacing:1.2px;gap:5px}header .wrap{gap:12px}}
+@media(max-width:380px){header .brand{width:180px}header .brand-title{font-size:15px}header .brand-subtitle{font-size:6px;letter-spacing:1px}header .wrap{padding-left:16px;padding-right:16px;gap:8px}}
 </style>
 </head>
 <body>
@@ -99,7 +111,7 @@ footer{padding-bottom:100px}
 
 <header>
 <div class="wrap">
-<a href="#" class="logo"><span>▰</span> AUTOSPURGO NAPOLI</a>
+<a href="#" class="brand" aria-label="Autospurgo Napoli — Spurgo e videoispezioni"><span class="brand-title">AUTOSPURGO <span>NAPOLI</span></span><span class="brand-subtitle">SPURGO E VIDEOISPEZIONI</span></a>
 <nav>
 <a href="#servizi">Servizi</a>
 <a href="#esperienza">Perché sceglierci</a>
@@ -117,7 +129,7 @@ footer{padding-bottom:100px}
 <p>Esperienza sul campo e attrezzature moderne per le tue reti fognarie. Un contatto diretto per trovare il servizio adatto alla tua esigenza.</p>
 <div class="actions">
 <a class="btn" href="tel:+393286531658">Chiama ora</a>
-<a class="btn outline" href="https://wa.me/393286531658" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+<a class="btn whatsapp" href="https://wa.me/393286531658" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
 </div>
 <p class="note">✓ Raccontaci la tua esigenza. Il preventivo è gratuito.</p>
 </div>
@@ -251,7 +263,7 @@ footer{padding-bottom:100px}
 
 <footer>
 <div class="wrap">
-<div class="logo"><span>▰</span> AUTOSPURGO NAPOLI</div>
+<div class="brand"><span class="brand-title">AUTOSPURGO <span>NAPOLI</span></span><span class="brand-subtitle">SPURGO E VIDEOISPEZIONI</span></div>
 Autospurgo e videoispezioni · Napoli e provincia<br>
 Anteprima grafica · Dati societari e informativa privacy da completare
 </div>
