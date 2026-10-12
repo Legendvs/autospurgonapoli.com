@@ -160,17 +160,6 @@
   .services .ico svg { width: 26px; height: 26px; }
   .services p { margin: 6px 0 0; color: var(--muted); max-width: 46em; }
 
-  /* Galleria */
-  .gallery { background: #fff; border-block: 1px solid var(--line); }
-  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 0; padding: 0; }
-  .tile { margin: 0; }
-  .tile-art { position: relative; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: linear-gradient(160deg, #0a3a44 0%, #0f6a7c 100%); }
-  .tile-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .tile-photo { position: absolute; inset: 0; background-size: cover; background-position: center; }
-  .tile figcaption { padding-top: 10px; font-weight: 700; font-size: .98rem; line-height: 1.35; }
-  @media (max-width: 920px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 640px) { .tiles { gap: 12px; } .tile figcaption { font-size: .9rem; } }
-
   /* Videoispezione */
   .video { background: var(--petrol-deep); color: #fff; }
   .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
@@ -386,90 +375,6 @@
         </div>
       </li>
     </ul>
-  </div>
-</section>
-
-<!-- GALLERIA: le illustrazioni vengono coperte automaticamente dalle foto reali (images/galleria-1.jpg ... galleria-4.jpg) -->
-<section class="gallery" id="interventi">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>I nostri camion e i nostri interventi</h2>
-    </div>
-    <div class="tiles">
-      <figure class="tile">
-        <div class="tile-art">
-          <svg viewBox="0 0 400 300" role="img" aria-label="Camion autospurgo">
-            <defs><clipPath id="tk"><rect x="118" y="104" width="246" height="96" rx="48"/></clipPath></defs>
-            <rect x="0" y="246" width="400" height="54" fill="#06232a" opacity=".6"/>
-            <rect x="56" y="196" width="318" height="20" rx="4" fill="#13211f"/>
-            <path d="M56 196V146q0-14 14-14h34l24 34v30Z" fill="#f5b700"/>
-            <path d="M74 144h28l16 22H74Z" fill="#8ee6ef"/>
-            <rect x="56" y="176" width="6" height="10" fill="#fff"/>
-            <rect x="118" y="104" width="246" height="96" rx="48" fill="#eef3f4"/>
-            <g clip-path="url(#tk)"><rect x="118" y="152" width="246" height="16" fill="#f5b700"/><rect x="118" y="104" width="30" height="96" fill="#d3dde0"/></g>
-            <path d="M240 114c-8 10-12 16-12 22a12 12 0 0 0 24 0c0-6-4-12-12-22Z" fill="#19b8c9"/>
-            <circle cx="372" cy="160" r="22" fill="#13211f" stroke="#f5b700" stroke-width="5"/>
-            <circle cx="372" cy="160" r="7" fill="#f5b700"/>
-            <path d="M372 182q22 36-6 52" fill="none" stroke="#19b8c9" stroke-width="7" stroke-linecap="round"/>
-            <g fill="#13211f"><circle cx="96" cy="222" r="24"/><circle cx="290" cy="222" r="24"/><circle cx="336" cy="222" r="24"/></g>
-            <g fill="#aebfc2"><circle cx="96" cy="222" r="10"/><circle cx="290" cy="222" r="10"/><circle cx="336" cy="222" r="10"/></g>
-          </svg>
-          <div class="tile-photo" style="background-image:none" aria-hidden="true"></div>
-        </div>
-        <figcaption>Autospurgo con camion moderni e attrezzati</figcaption>
-      </figure>
-
-      <figure class="tile">
-        <div class="tile-art">
-          <svg viewBox="0 0 400 300" role="img" aria-label="Videoispezione di una tubazione con telecamera">
-            <rect x="14" y="120" width="372" height="120" rx="14" fill="#0a2a31" stroke="#8ee6ef" stroke-width="5"/>
-            <rect x="19" y="214" width="362" height="21" fill="#3b4a3f"/>
-            <path d="M270 166 380 132V216L270 182Z" fill="#f5b700" opacity=".22"/>
-            <path d="M330 124l-10 16 12 8-8 16" fill="none" stroke="#f5b700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M210 174H0" stroke="#8ee6ef" stroke-width="5" fill="none"/>
-            <path d="M86 100V174" stroke="#8ee6ef" stroke-width="5" fill="none"/>
-            <rect x="210" y="156" width="52" height="36" rx="9" fill="#f5b700"/>
-            <circle cx="262" cy="174" r="11" fill="#0a1c20"/><circle cx="262" cy="174" r="5" fill="#19b8c9"/>
-            <rect x="24" y="24" width="124" height="76" rx="8" fill="#0a1c20" stroke="#f5b700" stroke-width="4"/>
-            <g fill="none" stroke="#19b8c9" stroke-width="3"><circle cx="86" cy="62" r="26"/><circle cx="86" cy="62" r="17"/><circle cx="86" cy="62" r="8"/></g>
-          </svg>
-          <div class="tile-photo" style="background-image:none" aria-hidden="true"></div>
-        </div>
-        <figcaption>Videoispezione con telecamera</figcaption>
-      </figure>
-
-      <figure class="tile">
-        <div class="tile-art">
-          <svg viewBox="0 0 400 300" role="img" aria-label="Disostruzione di una tubazione con getto ad alta pressione">
-            <rect x="14" y="120" width="372" height="120" rx="14" fill="#0a2a31" stroke="#8ee6ef" stroke-width="5"/>
-            <path d="M300 140q-18 30-6 60 10 24 40 20 40-6 40-40 0-30-34-50-24-10-40 10Z" fill="#6b5a3c"/>
-            <g fill="#4a3d27"><circle cx="330" cy="170" r="6"/><circle cx="348" cy="196" r="8"/><circle cx="316" cy="204" r="5"/></g>
-            <path d="M0 180H150" stroke="#f5b700" stroke-width="12" fill="none"/>
-            <rect x="150" y="170" width="34" height="20" rx="6" fill="#aebfc2"/>
-            <g stroke="#8ee6ef" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8" fill="none"><path d="M184 180 270 150"/><path d="M184 180H282"/><path d="M184 180 270 210"/></g>
-            <g fill="#8ee6ef"><circle cx="226" cy="140" r="4"/><circle cx="246" cy="224" r="4"/><circle cx="214" cy="160" r="3"/></g>
-          </svg>
-          <div class="tile-photo" style="background-image:none" aria-hidden="true"></div>
-        </div>
-        <figcaption>Disostruzione con getto ad alta pressione</figcaption>
-      </figure>
-
-      <figure class="tile">
-        <div class="tile-art">
-          <svg viewBox="0 0 400 300" role="img" aria-label="Svuotamento di una fossa biologica">
-            <rect x="0" y="96" width="400" height="204" fill="#3a2f26"/>
-            <rect x="0" y="92" width="400" height="8" fill="#2f9e5f"/>
-            <rect x="70" y="140" width="260" height="120" rx="12" fill="#0f5a6b" stroke="#8ee6ef" stroke-width="4"/>
-            <path d="M74 188q21-10 42 0t42 0 42 0 42 0 42 0 42 0v68H74Z" fill="#19b8c9" opacity=".6"/>
-            <rect x="176" y="100" width="48" height="40" fill="#0a2a31" stroke="#8ee6ef" stroke-width="4"/>
-            <path d="M200 232V60Q200 34 232 34H330" fill="none" stroke="#f5b700" stroke-width="12" stroke-linecap="round"/>
-            <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M192 84l8-10 8 10"/><path d="M192 132l8-10 8 10"/></g>
-          </svg>
-          <div class="tile-photo" style="background-image:none" aria-hidden="true"></div>
-        </div>
-        <figcaption>Svuotamento pozzi neri e fosse biologiche</figcaption>
-      </figure>
-    </div>
   </div>
 </section>
 
