@@ -319,43 +319,27 @@
 
     <div class="form-card" id="preventivo">
       <h2>Richiedi un preventivo gratuito</h2>
-      <p class="sub">Il modulo sarà attivato a breve. Per un preventivo gratuito chiamaci o scrivici su WhatsApp.</p>
-      <form id="lead-form" onsubmit="return false">
-        <!-- DA COMPILARE: la chiave del modulo (Web3Forms) la inseriamo in un passo successivo -->
-        <input type="hidden" name="subject" value="Nuova richiesta preventivo - Autospurgo Napoli">
-        <input type="hidden" name="from_name" value="Landing autospurgonapoli.com">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
+      <p class="sub">Compila i campi e continua su WhatsApp per richiedere il tuo preventivo.</p>
+      <form id="lead-form">
         <div class="field">
-          <label for="nome">Nome e cognome</label>
-          <input type="text" id="nome" name="nome" autocomplete="name" required>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" maxlength="120" required>
         </div>
         <div class="field">
           <label for="telefono">Telefono</label>
-          <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" required>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" maxlength="40" required>
         </div>
         <div class="field">
-          <label for="comune">Comune dell'intervento</label>
-          <input type="text" id="comune" name="comune" placeholder="Es. Napoli, Pozzuoli, Casoria" required>
-        </div>
-        <div class="field">
-          <label for="servizio">Di cosa hai bisogno?</label>
-          <select id="servizio" name="servizio" required>
-            <option value="">Seleziona il servizio</option>
-            <option>Spurgo pozzo nero / fossa biologica</option>
-            <option>Disostruzione scarichi e fognature</option>
-            <option>Pulizia caditoie e condotte</option>
-            <option>Videoispezione tubazioni</option>
-            <option>Altro / non so</option>
-          </select>
+          <label for="servizio">Servizio</label>
+          <input type="text" id="servizio" name="servizio" placeholder="Es. autospurgo o videoispezione" maxlength="300" required>
         </div>
         <div class="field">
           <label for="messaggio">Messaggio (facoltativo)</label>
-          <textarea id="messaggio" name="messaggio"></textarea>
+          <textarea id="messaggio" name="messaggio" maxlength="2000" placeholder="Aggiungi dettagli sull’intervento"></textarea>
         </div>
-<p class="form-note">Invio non ancora attivo. Nessun dato viene trasmesso da questo modulo.</p>
-        <button class="btn btn-call btn-block" type="button" disabled style="opacity:.65;cursor:not-allowed">Modulo in preparazione</button>
-        <div id="form-msg" class="form-msg" role="status" aria-live="polite"></div>
+        <button class="btn btn-wa btn-block" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Continua su WhatsApp</button>
+        <p class="form-note">Si aprirà WhatsApp con il messaggio compilato. Potrai verificarlo e premere Invio per contattarci.</p>
+        <noscript><p class="form-note">Per compilare il messaggio abilita JavaScript, oppure <a href="https://wa.me/393286531658">apri direttamente WhatsApp</a>.</p></noscript>
         <p class="form-note">Preferisci parlare subito? <a href="tel:+393286531658" class="js-call"><strong>Chiama 328 653 1658</strong></a></p>
       </form>
     </div>
@@ -614,5 +598,29 @@
 </div>
 
 
+<script>
+(function () {
+  var form = document.getElementById('lead-form');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var fields = ['nome', 'telefono', 'servizio'];
+    for (var i = 0; i < fields.length; i++) {
+      var field = form.elements[fields[i]];
+      field.setCustomValidity(field.value.trim() ? '' : 'Compila questo campo.');
+    }
+    if (!form.reportValidity()) return;
+    var text = 'Buongiorno, vorrei un preventivo gratuito.\n\n' +
+      'Nome: ' + form.elements.nome.value.trim() + '\n' +
+      'Telefono: ' + form.elements.telefono.value.trim() + '\n' +
+      'Servizio: ' + form.elements.servizio.value.trim();
+    var message = form.elements.messaggio.value.trim();
+    if (message) text += '\nMessaggio: ' + message;
+    window.location.assign('https://wa.me/393286531658?text=' + encodeURIComponent(text));
+  });
+  form.addEventListener('input', function (event) {
+    if (event.target.setCustomValidity) event.target.setCustomValidity('');
+  });
+})();
+</script>
 </body>
 </html>
