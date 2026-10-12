@@ -1,28 +1,265 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spurgo Napoli e Provincia | Autospurgo e Videoispezioni</title>
-  <meta name="description" content="Servizi di spurgo fognature, pozzi neri, fosse biologiche e videoispezioni a Napoli e provincia. Richiedi informazioni e preventivi.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Autospurgo Napoli</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:#132e43;background:#fff;font-family:Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 24px}
+.top{background:#102b40;color:#dae6ee;padding:10px;text-align:center;font-size:12px}
+header{background:white;border-bottom:1px solid #e4ebef}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:22px;padding-bottom:22px}
+.logo{font-size:20px;font-weight:900;letter-spacing:-.6px}
+.logo span{color:#f57525}
+nav{display:flex;gap:24px;font-size:14px}
+.btn{display:inline-block;padding:16px 22px;background:#f57525;color:white;border-radius:7px;font-weight:bold;font-size:14px;text-align:center}
+.btn:hover{background:#df6017}
+.outline{background:transparent;border:1px solid #92a7b6}
+.outline:hover{background:#ffffff15}
+.hero{background:#102b40;color:white;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:35px;align-items:center;padding-top:75px;padding-bottom:75px}
+.label{color:#f57525;font-size:11px;letter-spacing:2px;font-weight:bold;text-transform:uppercase}
+h1{font-size:55px;letter-spacing:-2px;line-height:1.08;margin:20px 0 24px}
+.hero p{color:#c8d8e3;font-size:17px;line-height:1.8;max-width:460px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.note{font-size:12px!important;margin-top:22px}
+.visual{background:linear-gradient(145deg,#234960,#153348);border:1px solid #ffffff18;border-radius:20px;padding:35px 20px;text-align:center}
+.visual svg{width:100%;height:auto}
+.visual small{color:#a7c2d1;font-size:11px}
+.trust{border-bottom:1px solid #e2e9ee}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding-top:30px;padding-bottom:30px}
+.trust strong{display:block;margin-bottom:8px;font-size:15px}
+.trust small{color:#657888;line-height:1.6}
+section{padding:75px 0}
+h2{font-size:36px;letter-spacing:-1px;line-height:1.2;margin:16px 0}
+.lead{color:#657888;line-height:1.8;max-width:670px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:35px}
+.card{border:1px solid #dfe8ed;padding:32px;border-radius:12px}
+.icon{background:#fff0e5;color:#ee7024;width:58px;height:58px;display:grid;place-items:center;border-radius:14px;font-size:28px;margin:20px 0}
+.card h3{font-size:25px;margin:0 0 15px}
+.card p{color:#657888;font-size:15px;line-height:1.8}
+.card a{font-weight:bold;font-size:14px}
+.arrow{color:#f57525}
+.pale{background:#f1f6f8}
+.why{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
+.experience{background:#102b40;border-radius:15px;padding:40px;color:white}
+.number{color:#f57525;font-weight:900;font-size:95px;letter-spacing:-6px}
+.experience h3{font-size:25px;line-height:1.35}
+.experience p{color:#bed0dc;line-height:1.8}
+.reason{margin-top:24px}
+.reason strong{font-size:16px}
+.reason p{color:#657888;font-size:14px;line-height:1.7;margin:8px 0}
+.coverage{background:#102b40;color:white;border-radius:12px;padding:30px;margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.coverage h3{margin:0 0 10px;font-size:23px}
+.coverage p{color:#bed0dc;font-size:14px;line-height:1.6;margin:0}
+.reviews{border:1px solid #dfe8ed;border-radius:12px;padding:28px;margin-top:30px}
+.reviews p{color:#657888;line-height:1.8;font-size:14px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.phone{display:block;font-size:33px;font-weight:900;margin:28px 0}
+.whatsapp{background:#208447}
+.whatsapp:hover{background:#176b38}
+.email{display:block;margin-top:22px;color:#657888;font-size:14px}
+form{background:white;border:1px solid #dfe8ed;border-radius:12px;padding:28px}
+form label{font-size:12px;font-weight:bold;display:block;margin-bottom:8px}
+input,textarea{width:100%;font:inherit;padding:13px;border:1px solid #d7e2e9;border-radius:6px;margin-bottom:18px;background:#fcfdfe}
+textarea{min-height:105px;resize:vertical}
+button{border:0;cursor:pointer;width:100%}
+.form-note{font-size:12px;color:#657888;line-height:1.7;margin:0 0 20px}
+footer{background:#0c2233;color:#bed0dc;padding:35px 0;font-size:12px;line-height:1.8}
+footer .logo{color:white;margin-bottom:12px}
+.sticky{display:none}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f57525;outline-offset:4px}
+@media(max-width:750px){
+nav{display:none}
+header .logo{font-size:16px}
+header .btn{padding:12px;font-size:12px}
+.hero-grid,.cards,.why,.contact{grid-template-columns:1fr}
+.hero-grid{padding-top:45px;padding-bottom:45px;gap:30px}
+h1{font-size:41px}
+h2{font-size:30px}
+.visual{padding:15px}
+.trust .wrap{grid-template-columns:1fr;gap:22px}
+section{padding:50px 0}
+.why,.contact{gap:30px}
+.coverage{align-items:flex-start;flex-direction:column}
+.actions .btn{flex:1;padding:16px 12px}
+footer{padding-bottom:100px}
+.sticky{display:flex;position:fixed;bottom:0;left:0;right:0;background:white;padding:12px;gap:10px;box-shadow:0 -3px 20px #102b4020}
+.sticky .btn{flex:1}
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Spurgo Napoli e Provincia</h1>
-    <p>Servizi di autospurgo e videoispezioni fognarie</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>I nostri servizi</h2>
-      <p>Spurgo fognature, pozzi neri, fosse biologiche e videoispezioni.</p>
-    </section>
+<div class="top">Napoli e provincia · Preventivi gratuiti</div>
 
-    <section>
-      <h2>Contattaci</h2>
-      <p>Richiedi informazioni o un preventivo per il tuo intervento.</p>
-    </section>
-  </main>
+<header>
+<div class="wrap">
+<a href="#" class="logo"><span>▰</span> AUTOSPURGO NAPOLI</a>
+<nav>
+<a href="#servizi">Servizi</a>
+<a href="#esperienza">Perché sceglierci</a>
+<a href="#contatti">Contatti</a>
+</nav>
+<a class="btn" href="tel:+393286531658">Chiama ora ↗</a>
+</div>
+</header>
+
+<div class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="label">Oltre 30 anni di esperienza</span>
+<h1>Autospurgo e videoispezioni a Napoli e provincia.</h1>
+<p>Esperienza sul campo e attrezzature moderne per le tue reti fognarie. Un contatto diretto per trovare il servizio adatto alla tua esigenza.</p>
+<div class="actions">
+<a class="btn" href="tel:+393286531658">Chiama ora</a>
+<a class="btn outline" href="https://wa.me/393286531658" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+</div>
+<p class="note">✓ Raccontaci la tua esigenza. Il preventivo è gratuito.</p>
+</div>
+
+<div class="visual">
+<svg viewBox="0 0 500 310" role="img" aria-label="Illustrazione di un camion autospurgo">
+<defs>
+<linearGradient id="tank" x2="0" y2="1">
+<stop stop-color="#ffa35d"/>
+<stop offset="1" stop-color="#e45d18"/>
+</linearGradient>
+</defs>
+<circle cx="390" cy="62" r="30" fill="#f6a95e" opacity=".8"/>
+<path d="M0 205L95 100L155 160L230 95L350 205Z" fill="#31546a"/>
+<path d="M180 205L290 122L315 105L350 148L430 205Z" fill="#3c6075"/>
+<path d="M15 260H485" stroke="#658296" stroke-width="3"/>
+<ellipse cx="263" cy="264" rx="190" ry="12" fill="#0b2234" opacity=".6"/>
+<rect x="175" y="143" width="250" height="88" rx="38" fill="url(#tank)"/>
+<path d="M220 148V225M370 148V225" stroke="#c45217" stroke-width="8"/>
+<rect x="94" y="156" width="81" height="82" rx="9" fill="#eaf2f6"/>
+<path d="M94 165L75 207V238H105V165Z" fill="#d2e1e9"/>
+<path d="M105 165H162V199H91Z" fill="#2b536b"/>
+<rect x="107" y="205" width="46" height="5" fill="#f57525"/>
+<rect x="74" y="230" width="355" height="18" rx="4" fill="#a2b5c0"/>
+<rect x="335" y="120" width="52" height="17" rx="5" fill="#f57525"/>
+<path d="M363 122V98H414V169" fill="none" stroke="#152b3a" stroke-width="12" stroke-linejoin="round"/>
+<circle cx="124" cy="245" r="26" fill="#102433"/>
+<circle cx="124" cy="245" r="13" fill="#9cb1bd"/>
+<circle cx="315" cy="245" r="26" fill="#102433"/>
+<circle cx="315" cy="245" r="13" fill="#9cb1bd"/>
+<circle cx="385" cy="245" r="26" fill="#102433"/>
+<circle cx="385" cy="245" r="13" fill="#9cb1bd"/>
+</svg>
+<small>Illustrazione provvisoria · Foto professionale da inserire</small>
+</div>
+</div>
+</div>
+
+<div class="trust">
+<div class="wrap">
+<div><strong>30+ anni di esperienza</strong><small>Competenza costruita sul campo.</small></div>
+<div><strong>Mezzi di ultima generazione</strong><small>Camion e attrezzature moderne.</small></div>
+<div><strong>Preventivi gratuiti</strong><small>Il primo passo è parlarne insieme.</small></div>
+</div>
+</div>
+
+<section id="servizi">
+<div class="wrap">
+<span class="label">I nostri servizi</span>
+<h2>Due servizi. Un unico riferimento.</h2>
+<p class="lead">Dallo spurgo delle fognature al controllo delle tubazioni: servizi professionali in tutta Napoli e provincia.</p>
+<div class="cards">
+<article class="card">
+<span class="label">01 / Pulizia reti fognarie</span>
+<div class="icon">↗</div>
+<h3>Autospurgo a Napoli</h3>
+<p>Autospurgo e spurgo fognature con mezzi moderni. Descrivici la situazione e la zona dell’intervento per richiedere informazioni e un preventivo gratuito.</p>
+<a href="tel:+393286531658">Parla con noi <span class="arrow">→</span></a>
+</article>
+<article class="card">
+<span class="label">02 / Controllo tubazioni</span>
+<div class="icon">◎</div>
+<h3>Videoispezioni fognature</h3>
+<p>Controllo visivo dell’interno delle tubazioni per verificarne le condizioni e individuare eventuali anomalie. Tecnologia e competenza per una valutazione precisa.</p>
+<a href="https://wa.me/393286531658" target="_blank" rel="noopener">Chiedi informazioni <span class="arrow">→</span></a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="pale" id="esperienza">
+<div class="wrap">
+<div class="why">
+<div class="experience">
+<span class="label">Un’esperienza che conta</span>
+<div class="number">30+</div>
+<h3>Anni di esperienza.<br>Uno sguardo al futuro.</h3>
+<p>La competenza maturata negli anni incontra mezzi e attrezzature di ultima generazione.</p>
+</div>
+<div>
+<span class="label">Perché sceglierci</span>
+<h2>La competenza giusta, quando serve.</h2>
+<div class="reason"><strong>✓ Esperienza sul campo</strong><p>Oltre 30 anni di esperienza nel settore.</p></div>
+<div class="reason"><strong>✓ Tecnologia moderna</strong><p>Camion e attrezzature dedicate ad autospurgo e videoispezioni.</p></div>
+<div class="reason"><strong>✓ Contatto diretto</strong><p>Chiamate, WhatsApp e preventivi gratuiti.</p></div>
+</div>
+</div>
+<div class="coverage">
+<div><h3>Napoli e tutta la provincia.</h3><p>Indicaci il comune e il servizio di cui hai bisogno.</p></div>
+<a class="btn" href="tel:+393286531658">Richiedi un preventivo ↗</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<span class="label">La fiducia dei clienti</span>
+<h2>Le opinioni di chi ci ha scelto.</h2>
+<p class="lead">Recensioni del profilo Google di Sor Eco Srl.</p>
+<div class="reviews">
+<strong>Recensioni reali, da integrare dopo la verifica.</strong>
+<p>In questa anteprima non vengono mostrate valutazioni o testimonianze non verificate.</p>
+<a class="btn" href="https://business.google.com/v/sor-eco-srl-espurghi-disinfestazioni-bonifiche-amianto-centro-di-stoccaggio-caserta/05814062937464510561/6bda/_" target="_blank" rel="noopener">Apri il profilo Google ↗</a>
+</div>
+</div>
+</section>
+
+<section class="pale" id="contatti">
+<div class="wrap contact">
+<div>
+<span class="label">Parliamone</span>
+<h2>Il tuo intervento inizia da qui.</h2>
+<p class="lead">Cerchi un servizio di autospurgo o una videoispezione a Napoli? Contattaci per informazioni e un preventivo gratuito.</p>
+<a class="phone" href="tel:+393286531658">328 653 1658 ↗</a>
+<a class="btn whatsapp" href="https://wa.me/393286531658" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+<a class="email" href="mailto:info@sorecoambiente.it">info@sorecoambiente.it</a>
+</div>
+<form onsubmit="event.preventDefault();document.getElementById('esito').hidden=false">
+<p class="form-note">Anteprima: il form non invia messaggi. Per contattarci usa telefono, WhatsApp o email.</p>
+<label for="nome">Nome</label>
+<input id="nome" autocomplete="name" placeholder="Il tuo nome" required>
+<label for="telefono">Telefono</label>
+<input id="telefono" type="tel" autocomplete="tel" placeholder="Il tuo numero" required>
+<label for="messaggio">Di cosa hai bisogno?</label>
+<textarea id="messaggio" placeholder="Descrivi il servizio e indica il comune" required></textarea>
+<button class="btn" type="submit">Prova il form dell’anteprima →</button>
+<p id="esito" class="form-note" hidden style="margin-top:18px">Prova completata: nessun messaggio inviato e nessun dato salvato.</p>
+</form>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="logo"><span>▰</span> AUTOSPURGO NAPOLI</div>
+Autospurgo e videoispezioni · Napoli e provincia<br>
+Anteprima grafica · Dati societari e informativa privacy da completare
+</div>
+</footer>
+
+<div class="sticky">
+<a class="btn" href="tel:+393286531658">Chiama ora</a>
+<a class="btn whatsapp" href="https://wa.me/393286531658" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 </body>
 </html>
