@@ -160,7 +160,7 @@
   .services .ico svg { width: 26px; height: 26px; }
   .services p { margin: 6px 0 0; color: var(--muted); max-width: 46em; }
 
-  /* Spurgo: foto del camion da aggiungere quando disponibile come file. */
+  /* Spurgo */
   .spurgo { background: var(--petrol-deep); color: #fff; }
   .spurgo-copy { max-width: 46em; }
   .spurgo h2 { margin-bottom: 18px; }
@@ -177,11 +177,9 @@
     content: ""; position: absolute; left: 0; top: .4em; width: 18px; height: 10px;
     border-left: 3px solid var(--yellow); border-bottom: 3px solid var(--yellow); transform: rotate(-45deg) scale(.9);
   }
-  .photo-slot {
-    aspect-ratio: 4 / 3; border-radius: 10px; border: 1px solid rgba(255,255,255,.18);
-    background-color: #0b3138;
-    background-image: none, repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 14px, transparent 14px 28px);
-    background-size: cover; background-position: center;
+  .service-photo {
+    width: 100%; height: auto; min-width: 0;
+    border-radius: 10px; border: 1px solid rgba(255,255,255,.18);
   }
 
   /* Come funziona (vera sequenza) */
@@ -397,8 +395,7 @@
       </ul>
       <a class="btn btn-call js-call" href="tel:+393286531658"><svg><use href="#i-phone"/></svg>Chiedi una videoispezione</a>
     </div>
-    <!-- Per mostrare una tua foto: salva il file come images/videoispezione.jpg nel repository -->
-    <div class="photo-slot" role="img" aria-label="Videoispezione di una tubazione con telecamera"></div>
+    <img class="service-photo" src="videoispezione.jpg" width="2000" height="1058" alt="Operatore con telecamera e monitor per la videoispezione delle tubazioni" loading="lazy" decoding="async">
   </div>
 </section>
 
@@ -419,7 +416,7 @@
 
 <!-- SPURGO -->
 <section class="spurgo" id="autospurgo">
-  <div class="wrap">
+  <div class="wrap video-grid">
     <div class="spurgo-copy">
       <h2>Spurgo: libera scarichi e fognature dalle ostruzioni</h2>
       <p>Quando gli scarichi defluiscono lentamente, una fognatura è ostruita o una fossa biologica deve essere svuotata, serve un intervento mirato. Con i nostri camion moderni eseguiamo lo spurgo di pozzi neri e fosse biologiche e la pulizia delle condotte, per rimuovere i materiali accumulati e favorire il corretto deflusso.</p>
@@ -430,6 +427,7 @@
       </ul>
       <a class="btn btn-call js-call" href="tel:+393286531658"><svg aria-hidden="true"><use href="#i-phone"/></svg>Richiedi un intervento di spurgo</a>
     </div>
+    <img class="service-photo" src="autospurgo.jpg" width="371" height="334" alt="Camion autospurgo con tubo di aspirazione durante un intervento" loading="lazy" decoding="async">
   </div>
 </section>
 
