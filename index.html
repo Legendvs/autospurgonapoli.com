@@ -82,9 +82,9 @@
 
   /* Barra superiore */
   .topbar { background: var(--petrol-deep); color: #fff; position: sticky; top: 0; z-index: 60; }
-  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 4px; }
-  .brand { display: inline-flex; align-items: center; justify-content: center; flex: 0 1 260px; min-width: 0; height: 64px; padding: 0; background: transparent; text-decoration: none; line-height: 1; }
-  .brand-logo { display: block; width: 100%; height: 100%; object-fit: contain; transform: scale(1.12); transform-origin: left center; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .brand { display: block; text-decoration: none; line-height: 0; }
+  .brand-logo { display: block; width: 210px; height: auto; }
   .topbar-phone { font-weight: 800; font-size: 1.05rem; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; background: var(--yellow); color: var(--petrol-deep); padding: .5em 1.05em; border-radius: 999px; white-space: nowrap; }
   .topbar-phone svg { width: 1.1em; height: 1.1em; color: currentColor; }
 
@@ -125,6 +125,12 @@
   .chips li:nth-child(2) { background: var(--aqua-light); color: var(--petrol-deep); }
   .chips li:nth-child(3) { border: 1.5px solid rgba(255,255,255,.7); color: #fff; }
   .hazard { height: 16px; background: repeating-linear-gradient(-45deg, var(--yellow) 0 16px, #0a1c20 16px 32px); }
+
+  /* Foto sotto il modulo */
+  .hero-side { min-width: 0; }
+  .photo-strip { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .photo-strip li { margin: 0; min-width: 0; }
+  .photo-strip img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,.28); box-shadow: 0 6px 16px rgba(0,0,0,.25); }
 
   /* Form */
   .form-card { background: #fff; color: var(--ink); border-radius: 10px; padding: 28px; box-shadow: 0 18px 40px rgba(0,0,0,.28); border-top: 6px solid var(--aqua); }
@@ -245,14 +251,15 @@
     .hero-grid > div:first-child { padding-top: 16px; }
     .hero h1 { font-size: 1.95rem; margin-bottom: 14px; }
     .hero .lead { font-size: 1.05rem; margin-bottom: 22px; }
-    .brand { flex-basis: 190px; height: 48px; padding: 0; }
-      .topbar .wrap { padding-block: 4px; gap: 8px; }
+    .brand-logo { width: 168px; }
+    .topbar .wrap { padding-block: 10px; gap: 8px; }
     .topbar-phone { font-size: .8rem; padding: .45em .75em; gap: .4em; }
     .cta-row { gap: 10px; margin-bottom: 22px; }
     .cta-row .btn { width: 100%; min-height: 56px; }
     .chips { gap: 8px; }
     .chips li { font-size: .88rem; padding: .5em .9em; }
     .form-card { padding: 22px; }
+    .photo-strip { gap: 8px; margin-top: 14px; }
     .services li { grid-template-columns: 1fr; gap: 12px; }
     .zone-list { columns: 1; }
     .sticky-bar {
@@ -263,7 +270,7 @@
     .sticky-bar .btn { padding: .8em .5em; font-size: 1rem; box-shadow: none; }
   }
   @media (max-width: 350px) {
-    .brand { flex-basis: 165px; height: 42px; }
+    .brand-logo { width: 138px; }
     .topbar-phone { font-size: .76rem; padding: .4em .65em; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
@@ -280,7 +287,12 @@
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Autospurgo Napoli, vai all'inizio della pagina">
-      <img class="brand-logo" src="logo.svg" width="200" height="44" alt="Autospurgo Napoli" decoding="async">
+      <svg class="brand-logo" viewBox="0 0 200 44" aria-hidden="true" focusable="false">
+        <text x="0" y="24" font-family="'Segoe UI',Arial,sans-serif" font-size="25" font-weight="800" fill="#ffffff" textLength="200" lengthAdjust="spacingAndGlyphs">AUTOSPURGO</text>
+        <rect x="0" y="34" width="60" height="3" fill="#f5b700"/>
+        <text x="100" y="41" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="800" fill="#f5b700" textLength="60" lengthAdjust="spacing">NAPOLI</text>
+        <rect x="140" y="34" width="60" height="3" fill="#f5b700"/>
+      </svg>
     </a>
     <a class="topbar-phone js-call" href="tel:+393286531658" aria-label="Chiama ora il 328 653 1658">
       <svg><use href="#i-phone"/></svg><span>Chiama Ora</span>
@@ -307,6 +319,7 @@
       </ul>
     </div>
 
+    <div class="hero-side">
     <div class="form-card" id="preventivo">
       <h2>Richiedi un preventivo gratuito</h2>
       <p class="sub">Compila i campi e continua su WhatsApp per richiedere il tuo preventivo.</p>
@@ -332,6 +345,12 @@
         <noscript><p class="form-note">Per compilare il messaggio abilita JavaScript, oppure <a href="https://wa.me/393286531658">apri direttamente WhatsApp</a>.</p></noscript>
         <p class="form-note">Preferisci parlare subito? <a href="tel:+393286531658" class="js-call"><strong>Chiama 328 653 1658</strong></a></p>
       </form>
+    </div>
+    <ul class="photo-strip">
+      <li><img src="camion-1.jpg" width="480" height="320" alt="Camion autospurgo con cisterna in acciaio"></li>
+      <li><img src="camion-2.jpg" width="480" height="320" alt="Operatori al lavoro con un camion autospurgo"></li>
+      <li><img src="camion-3.jpg" width="480" height="320" alt="Camion autospurgo in sosta di notte"></li>
+    </ul>
     </div>
   </div>
 </section>
