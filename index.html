@@ -81,10 +81,10 @@
   .btn-block { width: 100%; }
 
   /* Barra superiore */
-  .topbar { background: var(--petrol-deep); color: #fff; position: sticky; top: 0; z-index: 60; }
+  .topbar { background: #fff; color: var(--petrol-deep); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 60; }
   .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 4px; }
-  .brand { display: inline-flex; align-items: center; justify-content: center; flex: 0 1 300px; min-width: 0; height: 86px; padding: 0; background: transparent; text-decoration: none; line-height: 1; }
-  .brand img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .brand { display: inline-flex; align-items: center; justify-content: center; flex: 0 1 320px; min-width: 0; height: 80px; padding: 0; background: transparent; text-decoration: none; line-height: 1; }
+  .brand-logo { display: block; width: 100%; height: 100%; }
   .topbar-phone { font-weight: 800; font-size: 1.05rem; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; background: var(--yellow); color: var(--petrol-deep); padding: .5em 1.05em; border-radius: 999px; white-space: nowrap; }
   .topbar-phone svg { width: 1.1em; height: 1.1em; color: currentColor; }
 
@@ -245,7 +245,7 @@
     .hero-grid > div:first-child { padding-top: 16px; }
     .hero h1 { font-size: 1.95rem; margin-bottom: 14px; }
     .hero .lead { font-size: 1.05rem; margin-bottom: 22px; }
-    .brand { flex-basis: 210px; height: 64px; padding: 0; }
+    .brand { flex-basis: 210px; height: 57px; padding: 0; }
       .topbar .wrap { padding-block: 4px; gap: 8px; }
     .topbar-phone { font-size: .8rem; padding: .45em .75em; gap: .4em; }
     .cta-row { gap: 10px; margin-bottom: 22px; }
@@ -263,7 +263,7 @@
     .sticky-bar .btn { padding: .8em .5em; font-size: 1rem; box-shadow: none; }
   }
   @media (max-width: 350px) {
-    .brand { flex-basis: 180px; height: 56px; }
+    .brand { flex-basis: 180px; height: 49px; }
     .topbar-phone { font-size: .76rem; padding: .4em .65em; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
@@ -280,7 +280,7 @@
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Autospurgo Napoli, vai all'inizio della pagina">
-      <img src="logo.png" width="2172" height="724" alt="Autospurgo Napoli — Spurghi e videoispezioni" decoding="async">
+      <svg class="brand-logo" viewBox="40 80 2100 570" role="img" aria-label="Autospurgo Napoli — Spurghi e videoispezioni"><image href="logo.png" width="2172" height="724"/></svg>
     </a>
     <a class="topbar-phone js-call" href="tel:+393286531658" aria-label="Chiama ora il 328 653 1658">
       <svg><use href="#i-phone"/></svg><span>Chiama Ora</span>
