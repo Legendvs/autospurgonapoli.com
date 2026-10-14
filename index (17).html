@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autospurgo Napoli e Provincia | Videoispezioni e Preventivo Gratuito</title>
+<meta name="description" content="Autospurgo a Napoli e provincia: spurgo pozzi neri, fosse biologiche, disostruzione scarichi e fognature, videoispezioni di tubazioni. Oltre 30 anni di esperienza. Preventivo gratuito.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autospurgonapoli.com/">
+<meta property="og:title" content="Autospurgo Napoli e Provincia | Videoispezioni">
+<meta property="og:description" content="Spurgo, disostruzioni e videoispezioni in tutta Napoli. Oltre 30 anni di esperienza, camion moderni, preventivo gratuito.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autospurgonapoli.com/">
+<meta name="theme-color" content="#0e3b43">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Autospurgo Napoli",
+  "url": "https://autospurgonapoli.com/",
+  "telephone": "+393286531658",
+  "areaServed": { "@type": "AdministrativeArea", "name": "Provincia di Napoli" },
+  "description": "Autospurgo, disostruzione scarichi e videoispezioni di tubazioni a Napoli e provincia."
+}
+</script>
+
+<!--
+  TRACCIAMENTO GOOGLE ADS: lo inseriremo in un passo successivo (tag gtag.js + conversioni su chiamata, WhatsApp e form).
+-->
+
+<style>
+  :root {
+    --petrol: #0e3b43;
+    --petrol-deep: #082a30;
+    --yellow: #f5b700;
+    --yellow-dark: #d99f00;
+    --paper: #f6f7f4;
+    --ink: #13211f;
+    --muted: #4d5f5c;
+    --line: #d5dcd8;
+    --wa: #1c9c52;
+    --wa-dark: #157b40;
+    --aqua: #19b8c9;
+    --aqua-light: #8ee6ef;
+    --radius: 6px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+  h1, h2, h3 { line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 800; }
+  h3 { font-size: 1.15rem; font-weight: 700; }
+  p { margin: 0 0 1em; }
+  :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+  /* Pulsanti */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+    padding: .95em 1.5em; border-radius: var(--radius);
+    font-weight: 700; font-size: 1.05rem; text-decoration: none;
+    border: 2px solid transparent; cursor: pointer; font-family: inherit;
+    transition: background-color .15s, border-color .15s;
+  }
+  .btn svg { width: 1.25em; height: 1.25em; flex: none; }
+  .btn-call { background: var(--yellow); color: var(--petrol-deep); }
+  .btn-call:hover { background: var(--yellow-dark); }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-wa:hover { background: var(--wa-dark); }
+  .btn-block { width: 100%; }
+
+  /* Barra superiore */
+  .topbar { background: var(--petrol-deep); color: #fff; position: sticky; top: 0; z-index: 60; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .brand { display: block; text-decoration: none; line-height: 0; }
+  .brand-logo { display: block; width: 210px; height: auto; }
+  .topbar-phone { font-weight: 800; font-size: 1.05rem; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; background: var(--yellow); color: var(--petrol-deep); padding: .5em 1.05em; border-radius: 999px; white-space: nowrap; }
+  .topbar-phone svg { width: 1.1em; height: 1.1em; color: currentColor; }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    padding-block: 56px 76px;
+    background-color: #06232a;
+    background-image:
+      linear-gradient(155deg, rgba(5,30,37,.97) 0%, rgba(9,70,84,.94) 50%, rgba(22,170,189,.92) 100%),
+      none;
+    background-size: cover; background-position: center;
+  }
+  /* sezione di tubo: anelli concentrici */
+  .hero::before {
+    content: ""; position: absolute; right: -180px; top: -180px; width: 540px; height: 540px; border-radius: 50%;
+    border: 48px solid rgba(245,183,0,.17);
+    box-shadow: inset 0 0 0 30px rgba(255,255,255,.05), 0 0 0 38px rgba(255,255,255,.05);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: ""; position: absolute; left: -160px; bottom: -200px; width: 460px; height: 460px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(142,230,239,.38) 0%, rgba(142,230,239,0) 70%);
+    pointer-events: none;
+  }
+  .hero > .wrap { position: relative; z-index: 1; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: start; }
+  .hero-grid > div:first-child { padding-top: 24px; }
+  .hero h1 { font-size: clamp(2rem, 4.6vw, 3.3rem); font-weight: 800; margin-bottom: 18px; }
+  .hero .lead { font-size: 1.2rem; color: #dcf1f3; max-width: 34em; margin-bottom: 26px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+  .hero .btn { padding: 1em 1.2em; font-size: 1.05rem; }
+  .hero .btn-call { box-shadow: 0 10px 24px rgba(245,183,0,.35); }
+  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .chips li { display: inline-flex; align-items: center; gap: .55em; padding: .55em 1.05em; border-radius: 999px; font-weight: 700; font-size: .95rem; line-height: 1.2; }
+  .chips li::before { content: ""; width: .5em; height: .5em; border-radius: 50%; background: currentColor; flex: none; }
+  .chips li:nth-child(1) { background: var(--yellow); color: var(--petrol-deep); }
+  .chips li:nth-child(2) { background: var(--aqua-light); color: var(--petrol-deep); }
+  .chips li:nth-child(3) { border: 1.5px solid rgba(255,255,255,.7); color: #fff; }
+  .hazard { height: 16px; background: repeating-linear-gradient(-45deg, var(--yellow) 0 16px, #0a1c20 16px 32px); }
+
+  /* Foto sotto il modulo */
+  .hero-side { min-width: 0; }
+  .photo-strip { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .photo-strip li { margin: 0; min-width: 0; }
+  .photo-strip img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,.28); box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+
+  /* Form */
+  .form-card { background: #fff; color: var(--ink); border-radius: 10px; padding: 28px; box-shadow: 0 18px 40px rgba(0,0,0,.28); border-top: 6px solid var(--aqua); }
+  .form-card h2 { font-size: 1.45rem; margin-bottom: 4px; }
+  .form-card .sub { color: var(--muted); font-size: .97rem; margin-bottom: 18px; }
+  .field { margin-bottom: 14px; }
+  label { display: block; font-weight: 600; font-size: .93rem; margin-bottom: 5px; }
+  input[type=text], input[type=tel], select, textarea {
+    width: 100%; padding: .75em .85em; font: inherit; font-size: 1rem;
+    border: 1.5px solid #b9c4c0; border-radius: var(--radius); background: #fff; color: var(--ink);
+  }
+  textarea { min-height: 86px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { border-color: var(--petrol); }
+  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: .85rem; color: var(--muted); margin: 4px 0 16px; line-height: 1.45; }
+  .consent input { margin-top: 3px; width: 18px; height: 18px; flex: none; }
+  .form-note { font-size: .85rem; color: var(--muted); margin: 12px 0 0; text-align: center; }
+  .form-msg { display: none; margin-top: 14px; padding: 12px 14px; border-radius: var(--radius); font-weight: 600; font-size: .95rem; }
+  .form-msg.ok { display: block; background: #e2f4e9; color: #135b32; }
+  .form-msg.err { display: block; background: #fbe6e3; color: #8a1f12; }
+  .hp { position: absolute; left: -9999px; }
+
+  /* Sezioni */
+  section { padding-block: 72px; }
+  .section-head { max-width: 40em; margin-bottom: 40px; }
+  .section-head p { color: var(--muted); font-size: 1.08rem; margin-top: 12px; }
+
+  /* Servizi: elenco con filetti, non schede */
+  .services { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .services li { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .services .ico { width: 52px; height: 52px; border-radius: 50%; background: var(--petrol); color: var(--yellow); display: grid; place-items: center; }
+  .services .ico svg { width: 26px; height: 26px; }
+  .services p { margin: 6px 0 0; color: var(--muted); max-width: 46em; }
+
+  /* Spurgo */
+  .spurgo { background: var(--petrol-deep); color: #fff; }
+  .spurgo-copy { max-width: 46em; }
+  .spurgo h2 { margin-bottom: 18px; }
+  .spurgo p { color: #cfdedb; }
+
+  /* Videoispezione */
+  .video { background: var(--petrol-deep); color: #fff; }
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .video h2 { margin-bottom: 18px; }
+  .video p { color: #cfdedb; }
+  .checks { list-style: none; margin: 22px 0 28px; padding: 0; }
+  .checks li { position: relative; padding-left: 32px; margin-bottom: 11px; }
+  .checks li::before {
+    content: ""; position: absolute; left: 0; top: .4em; width: 18px; height: 10px;
+    border-left: 3px solid var(--yellow); border-bottom: 3px solid var(--yellow); transform: rotate(-45deg) scale(.9);
+  }
+  .service-photo {
+    width: 100%; height: auto; min-width: 0;
+    border-radius: 10px; border: 1px solid rgba(255,255,255,.18);
+  }
+
+  /* Come funziona (vera sequenza) */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: s; }
+  .steps li { counter-increment: s; border-top: 4px solid var(--yellow); padding-top: 18px; }
+  .steps li::before { content: counter(s); display: block; font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--petrol); margin-bottom: 10px; }
+  .steps p { color: var(--muted); margin-top: 6px; }
+
+  /* Zone */
+  .zones { background: #fff; border-block: 1px solid var(--line); }
+  .zone-list { columns: 3; column-gap: 32px; list-style: none; padding: 0; margin: 0 0 18px; }
+  .zone-list li { break-inside: avoid; padding: 5px 0; border-bottom: 1px dotted var(--line); }
+  .zones .note { color: var(--muted); }
+
+  /* Recensioni */
+  .rating-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px 22px; margin-bottom: 32px; }
+  .rating-head .score { font-size: 3rem; font-weight: 800; line-height: 1; color: var(--petrol); }
+  .stars { color: var(--yellow-dark); letter-spacing: 2px; font-size: 1.25rem; }
+  .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .review { background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--yellow); padding: 22px; border-radius: var(--radius); }
+  .review p { margin: 10px 0 14px; }
+  .review footer { font-weight: 700; font-size: .95rem; }
+  .review footer span { display: block; font-weight: 400; color: var(--muted); font-size: .85rem; }
+  .reviews-link { margin-top: 24px; }
+  .reviews-link a { font-weight: 700; color: var(--petrol); }
+
+  /* FAQ */
+  .faq { background: #fff; border-top: 1px solid var(--line); }
+  .faq-list { max-width: 52em; border-top: 2px solid var(--ink); }
+  details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  summary { cursor: pointer; font-weight: 700; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--petrol); }
+  details[open] summary::after { content: "\2212"; }
+  details p { margin: 12px 0 0; color: var(--muted); max-width: 46em; }
+
+  /* CTA finale */
+  .final { background: var(--yellow); color: var(--petrol-deep); text-align: center; }
+  .final h2 { margin-bottom: 12px; }
+  .final p { font-size: 1.15rem; margin-bottom: 26px; }
+  .final .cta-row { justify-content: center; margin: 0; }
+  .final .btn-call { background: var(--petrol-deep); color: #fff; }
+  .final .btn-call:hover { background: #000; }
+
+  /* Footer */
+  footer.site { background: var(--petrol-deep); color: #b8cdca; padding-top: 36px; padding-bottom: 104px; font-size: .92rem; }
+  footer.site a { color: #fff; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; }
+
+  /* Barra fissa mobile */
+  .sticky-bar { position: fixed; right: 20px; bottom: 20px; z-index: 50; display: flex; gap: 10px; }
+  .sticky-bar .btn { padding: .85em 1.3em; box-shadow: 0 8px 22px rgba(0,0,0,.3); }
+
+  @media (max-width: 920px) {
+    .hero-grid, .video-grid { grid-template-columns: 1fr; gap: 36px; }
+    .steps, .reviews { grid-template-columns: 1fr; }
+    .zone-list { columns: 2; }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    section { padding-block: 52px; }
+    .hero { padding-block: 28px 44px; }
+    .hero::before { width: 330px; height: 330px; right: -150px; top: -150px; border-width: 30px; box-shadow: inset 0 0 0 20px rgba(255,255,255,.05), 0 0 0 24px rgba(255,255,255,.05); }
+    .hero-grid { gap: 28px; }
+    .hero-grid > div:first-child { padding-top: 16px; }
+    .hero h1 { font-size: 1.95rem; margin-bottom: 14px; }
+    .hero .lead { font-size: 1.05rem; margin-bottom: 22px; }
+    .brand-logo { width: 168px; }
+    .topbar .wrap { padding-block: 10px; gap: 8px; }
+    .topbar-phone { font-size: .8rem; padding: .45em .75em; gap: .4em; }
+    .cta-row { gap: 10px; margin-bottom: 22px; }
+    .cta-row .btn { width: 100%; min-height: 56px; }
+    .chips { gap: 8px; }
+    .chips li { font-size: .88rem; padding: .5em .9em; }
+    .form-card { padding: 22px; }
+    .photo-strip { gap: 8px; margin-top: 14px; }
+    .services li { grid-template-columns: 1fr; gap: 12px; }
+    .zone-list { columns: 1; }
+    .sticky-bar {
+      left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: #fff; border-top: 1px solid var(--line);
+      box-shadow: 0 -4px 14px rgba(0,0,0,.14);
+    }
+    .sticky-bar .btn { padding: .8em .5em; font-size: 1rem; box-shadow: none; }
+  }
+  @media (max-width: 350px) {
+    .brand-logo { width: 138px; }
+    .topbar-phone { font-size: .76rem; padding: .4em .65em; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- Icone riutilizzabili -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2Z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.25-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.77.96-.14.17-.28.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.1-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.16 1.73 2.64 4.2 3.7.59.26 1.05.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28Z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Autospurgo Napoli, vai all'inizio della pagina">
+      <svg class="brand-logo" viewBox="0 0 200 44" aria-hidden="true" focusable="false">
+        <text x="0" y="24" font-family="'Segoe UI',Arial,sans-serif" font-size="25" font-weight="800" fill="#ffffff" textLength="200" lengthAdjust="spacingAndGlyphs">AUTOSPURGO</text>
+        <rect x="0" y="34" width="60" height="3" fill="#f5b700"/>
+        <text x="100" y="41" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="800" fill="#f5b700" textLength="60" lengthAdjust="spacing">NAPOLI</text>
+        <rect x="140" y="34" width="60" height="3" fill="#f5b700"/>
+      </svg>
+    </a>
+    <a class="topbar-phone js-call" href="tel:+393286531658" aria-label="Chiama ora il 328 653 1658">
+      <svg><use href="#i-phone"/></svg><span>Chiama Ora</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Autospurgo a Napoli e Provincia: Spurgo, Disostruzione e Videoispezione</h1>
+      <p class="lead">Svuotamento pozzi neri e fosse biologiche, disostruzione di scarichi e fognature, videoispezione delle tubazioni. Più di 30 anni di esperienza, camion moderni, preventivo gratuito.</p>
+      <div class="cta-row">
+        <a class="btn btn-call js-call" href="tel:+393286531658"><svg><use href="#i-phone"/></svg>Chiama 328 653 1658</a>
+        <a class="btn btn-wa js-wa" href="https://wa.me/393286531658?text=Buongiorno%2C%20vorrei%20un%20preventivo%20gratuito%20per%20un%20intervento%20di%20autospurgo." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Scrivici su WhatsApp</a>
+      </div>
+      <ul class="chips">
+        <li>Oltre 30 anni di esperienza</li>
+        <li>Preventivo gratuito</li>
+        <li>Camion moderni</li>
+      </ul>
+    </div>
+
+    <div class="hero-side">
+    <div class="form-card" id="preventivo">
+      <h2>Richiedi un preventivo gratuito</h2>
+      <p class="sub">Compila i campi e continua su WhatsApp per richiedere il tuo preventivo.</p>
+      <form id="lead-form">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" maxlength="120" required>
+        </div>
+        <div class="field">
+          <label for="telefono">Telefono</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" maxlength="40" required>
+        </div>
+        <div class="field">
+          <label for="servizio">Servizio</label>
+          <input type="text" id="servizio" name="servizio" placeholder="Es. autospurgo o videoispezione" maxlength="300" required>
+        </div>
+        <div class="field">
+          <label for="messaggio">Messaggio (facoltativo)</label>
+          <textarea id="messaggio" name="messaggio" maxlength="2000" placeholder="Aggiungi dettagli sull’intervento"></textarea>
+        </div>
+        <button class="btn btn-wa btn-block" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Continua su WhatsApp</button>
+        <p class="form-note">Si aprirà WhatsApp con il messaggio compilato. Potrai verificarlo e premere Invio per contattarci.</p>
+        <noscript><p class="form-note">Per compilare il messaggio abilita JavaScript, oppure <a href="https://wa.me/393286531658">apri direttamente WhatsApp</a>.</p></noscript>
+        <p class="form-note">Preferisci parlare subito? <a href="tel:+393286531658" class="js-call"><strong>Chiama 328 653 1658</strong></a></p>
+      </form>
+    </div>
+    <ul class="photo-strip">
+      <li><img src="camion-1.jpg" width="480" height="320" alt="Camion autospurgo con cisterna in acciaio"></li>
+      <li><img src="camion-2.jpg" width="480" height="320" alt="Operatori al lavoro con un camion autospurgo"></li>
+      <li><img src="camion-3.jpg" width="480" height="320" alt="Camion autospurgo in sosta di notte"></li>
+    </ul>
+    </div>
+  </div>
+</section>
+<div class="hazard" aria-hidden="true"></div>
+
+<!-- SERVIZI -->
+<section id="servizi">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Servizi di autospurgo a Napoli</h2>
+      <p>Interveniamo su abitazioni, condomini, attività commerciali e aziende in tutta Napoli e provincia.</p>
+    </div>
+    <ul class="services">
+      <li>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s6 6.2 6 10.4a6 6 0 0 1-12 0C6 9.700 12 3.500 12 3.500Z"/></svg></div>
+        <div>
+          <h3>Spurgo pozzi neri e fosse biologiche</h3>
+          <p>Svuotamento e pulizia di pozzi neri, fosse biologiche e vasche di raccolta con autospurgo, con smaltimento dei reflui.</p>
+        </div>
+      </li>
+      <li>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9a4 4 0 0 1 4 4v8"/><path d="M3 4v8"/><path d="M13 20h6"/></svg></div>
+        <div>
+          <h3>Disostruzione scarichi e fognature</h3>
+          <p>Liberiamo scarichi, colonne e condotte fognarie intasate con attrezzature a pressione, per ripristinare subito il deflusso.</p>
+        </div>
+      </li>
+      <li>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h8"/></svg></div>
+        <div>
+          <h3>Pulizia caditoie, pozzetti e condotte</h3>
+          <p>Pulizia periodica o straordinaria di caditoie, pozzetti, griglie e tubazioni di scarico per prevenire intasamenti e allagamenti.</p>
+        </div>
+      </li>
+      <li>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.200-4.200"/></svg></div>
+        <div>
+          <h3>Videoispezione di tubazioni e fognature</h3>
+          <p>Una telecamera all'interno della tubazione mostra la causa del problema: ostruzioni, rotture, radici, infiltrazioni.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- VIDEOISPEZIONE -->
+<section class="video" id="videoispezione">
+  <div class="wrap video-grid">
+    <div>
+      <h2>Videoispezione: vedi cosa succede dentro le tubazioni</h2>
+      <p>Quando uno scarico si intasa di continuo o c'è un cattivo odore che non va via, serve capire la causa prima di intervenire. Con la videoispezione di tubazioni e fognature inseriamo una telecamera nella condotta e individuiamo il punto esatto del problema.</p>
+      <ul class="checks">
+        <li>Individui ostruzioni, rotture e cedimenti senza scavi inutili</li>
+        <li>Controlli lo stato di tubazioni e collettori prima di un acquisto o di lavori</li>
+        <li>Intervieni solo dove serve, risparmiando tempo e costi</li>
+      </ul>
+      <a class="btn btn-call js-call" href="tel:+393286531658"><svg><use href="#i-phone"/></svg>Chiedi una videoispezione</a>
+    </div>
+    <img class="service-photo" src="videoispezione.jpg" width="2000" height="1058" alt="Operatore con telecamera e monitor per la videoispezione delle tubazioni" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section id="come-funziona">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Come funziona</h2>
+      <p>Tre passaggi, senza complicazioni.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Ci contatti</h3><p>Chiami, scrivi su WhatsApp o compili il modulo. Ci descrivi il problema e la zona.</p></li>
+      <li><h3>Ricevi il preventivo gratuito</h3><p>Ti diciamo come interveniamo e quanto costa, prima di iniziare. Senza impegno.</p></li>
+      <li><h3>Interveniamo</h3><p>Arriviamo con camion attrezzati e risolviamo il problema, a regola d'arte.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SPURGO -->
+<section class="spurgo" id="autospurgo">
+  <div class="wrap video-grid">
+    <div class="spurgo-copy">
+      <h2>Spurgo: libera scarichi e fognature dalle ostruzioni</h2>
+      <p>Quando gli scarichi defluiscono lentamente, una fognatura è ostruita o una fossa biologica deve essere svuotata, serve un intervento mirato. Con i nostri camion moderni eseguiamo lo spurgo di pozzi neri e fosse biologiche e la pulizia delle condotte, per rimuovere i materiali accumulati e favorire il corretto deflusso.</p>
+      <ul class="checks">
+        <li>Rimuovi accumuli e ostruzioni da scarichi, condotte e fognature</li>
+        <li>Svuoti pozzi neri e fosse biologiche con attrezzature dedicate</li>
+        <li>Previeni nuovi intasamenti con una pulizia e manutenzione regolare</li>
+      </ul>
+      <a class="btn btn-call js-call" href="tel:+393286531658"><svg aria-hidden="true"><use href="#i-phone"/></svg>Richiedi un intervento di spurgo</a>
+    </div>
+    <img class="service-photo" src="autospurgo.jpg" width="371" height="334" alt="Camion autospurgo con tubo di aspirazione durante un intervento" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- ZONE -->
+<section class="zones" id="zone">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Autospurgo in tutta Napoli e provincia</h2>
+    </div>
+    <ul class="zone-list">
+      <li>Napoli città</li><li>Pozzuoli</li><li>Casoria</li><li>Giugliano in Campania</li>
+      <li>Afragola</li><li>Torre del Greco</li><li>Portici</li><li>Ercolano</li>
+      <li>Castellammare di Stabia</li><li>Pomigliano d'Arco</li><li>Acerra</li><li>Marano di Napoli</li>
+      <li>Arzano</li><li>Casalnuovo di Napoli</li><li>Nola</li><li>Qualiano</li>
+    </ul>
+    <p class="note">Non trovi il tuo comune? Interveniamo in tutta la provincia di Napoli: <a href="tel:+393286531658" class="js-call"><strong>chiamaci</strong></a>.</p>
+  </div>
+</section>
+
+<!-- RECENSIONI -->
+<section id="recensioni">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Cosa dicono i nostri clienti</h2>
+    </div>
+
+
+    <div class="reviews">
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 stelle su 5">★★★★★</div>
+        <p>Azienda molto professionale ho richiesto lo spurgo di una fossa biologica e un sopralluogo per lo smaltimento di una canna fumaria in amianto grazie mille</p>
+        <footer>Dario Papa</footer>
+      </article>
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 stelle su 5">★★★★★</div>
+        <p>Azienda seria e preparata, abbiamo fissato un appuntamento per lo spurgo di una fossa biologica e videoispezione di alcune tubazioni, molto competenti li consiglio</p>
+        <footer>Giuseppe Nazaria</footer>
+      </article>
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 stelle su 5">★★★★★</div>
+        <p>Bravissimi! Ottimo lavoro di disinfestazione e video ispezione delle tubature di casa. Super consigliati.</p>
+        <footer>Marco Leone</footer>
+      </article>
+    </div>
+    <p class="reviews-link"><a class="btn btn-call" href="https://share.google/TiZzqbQtBOwlLBwBF" rel="noopener" target="_blank">Leggi tutte le recensioni su Google</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Domande frequenti</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Quanto costa uno spurgo a Napoli?</summary>
+        <p>Il prezzo dipende dal tipo di intervento, dalla quantità da svuotare e dalla difficoltà di accesso. Per questo offriamo un preventivo gratuito e senza impegno: ci descrivi la situazione e ti diciamo il costo prima di iniziare.</p>
+      </details>
+      <details>
+        <summary>In quali zone effettuate gli interventi di autospurgo?</summary>
+        <p>Lavoriamo in tutta Napoli e provincia. Se non vedi il tuo comune nell'elenco, chiamaci o scrivici su WhatsApp e ti confermiamo la disponibilità.</p>
+      </details>
+      <details>
+        <summary>Cos'è la videoispezione delle tubazioni e quando serve?</summary>
+        <p>È un controllo con telecamera all'interno di scarichi e fognature. Serve quando gli intasamenti si ripetono, quando ci sono cattivi odori o infiltrazioni, o prima di lavori e compravendite, per conoscere lo stato reale delle condotte.</p>
+      </details>
+      <details>
+        <summary>Ogni quanto va svuotata una fossa biologica?</summary>
+        <p>Dipende dalle dimensioni della fossa e da quante persone la usano. In generale è bene far controllare l'impianto con regolarità, per evitare tracimazioni e cattivi odori. Se hai dubbi, ti consigliamo noi in base al tuo caso.</p>
+      </details>
+      <details>
+        <summary>Fate interventi anche per condomini e aziende?</summary>
+        <p>Sì, interveniamo per abitazioni private, condomini, attività commerciali e aziende.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINALE -->
+<section class="final">
+  <div class="wrap">
+    <h2>Hai un problema di scarichi o fognature?</h2>
+    <p>Chiamaci o scrivici: ti diamo un preventivo gratuito.</p>
+    <div class="cta-row">
+      <a class="btn btn-call js-call" href="tel:+393286531658"><svg><use href="#i-phone"/></svg>Chiama 328 653 1658</a>
+      <a class="btn btn-wa js-wa" href="https://wa.me/393286531658?text=Buongiorno%2C%20vorrei%20un%20preventivo%20gratuito%20per%20un%20intervento%20di%20autospurgo." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Scrivici su WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <strong style="color:#fff">Autospurgo Napoli</strong><br>
+      <!-- DA COMPILARE: ragione sociale, partita IVA e sede legale -->
+      Dati societari da completare prima del lancio delle campagne.
+    </div>
+    <div>
+      Tel. <a href="tel:+393286531658" class="js-call">328 653 1658</a><br>
+      <span>Informativa privacy in preparazione</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra fissa mobile -->
+<div class="sticky-bar">
+  <a class="btn btn-call js-call" href="tel:+393286531658"><svg><use href="#i-phone"/></svg>Chiama Ora</a>
+  <a class="btn btn-wa js-wa" href="https://wa.me/393286531658?text=Buongiorno%2C%20vorrei%20un%20preventivo%20gratuito%20per%20un%20intervento%20di%20autospurgo." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+</div>
+
+
+<script>
+(function () {
+  var form = document.getElementById('lead-form');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var fields = ['nome', 'telefono', 'servizio'];
+    for (var i = 0; i < fields.length; i++) {
+      var field = form.elements[fields[i]];
+      field.setCustomValidity(field.value.trim() ? '' : 'Compila questo campo.');
+    }
+    if (!form.reportValidity()) return;
+    var text = 'Buongiorno, vorrei un preventivo gratuito.\n\n' +
+      'Nome: ' + form.elements.nome.value.trim() + '\n' +
+      'Telefono: ' + form.elements.telefono.value.trim() + '\n' +
+      'Servizio: ' + form.elements.servizio.value.trim();
+    var message = form.elements.messaggio.value.trim();
+    if (message) text += '\nMessaggio: ' + message;
+    window.location.assign('https://wa.me/393286531658?text=' + encodeURIComponent(text));
+  });
+  form.addEventListener('input', function (event) {
+    if (event.target.setCustomValidity) event.target.setCustomValidity('');
+  });
+})();
+</script>
+</body>
+</html>
