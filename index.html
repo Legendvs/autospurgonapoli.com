@@ -128,7 +128,7 @@
 
   /* Foto sotto il modulo */
   .hero-side { min-width: 0; }
-  .photo-strip { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .photo-strip { list-style: none; margin: 0 0 16px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .photo-strip li { margin: 0; min-width: 0; }
   .photo-strip a { display: block; border-radius: 8px; }
   .photo-strip img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,.28); box-shadow: 0 6px 16px rgba(0,0,0,.25); }
@@ -260,7 +260,7 @@
     .chips { gap: 8px; }
     .chips li { font-size: .88rem; padding: .5em .9em; }
     .form-card { padding: 22px; }
-    .photo-strip { gap: 8px; margin-top: 14px; }
+    .photo-strip { gap: 8px; margin: 0 0 14px; }
     .services li { grid-template-columns: 1fr; gap: 12px; }
     .zone-list { columns: 1; }
     .sticky-bar {
@@ -321,6 +321,11 @@
     </div>
 
     <div class="hero-side">
+    <ul class="photo-strip" aria-label="Foto dei camion autospurgo">
+      <li><a href="camion-1.jpg" target="_blank" rel="noopener" aria-label="Apri foto: Camion autospurgo fotografato di notte in centro città"><img src="camion-1.jpg" width="1600" height="686" alt="Camion autospurgo fotografato di notte in centro città" loading="lazy" decoding="async"></a></li>
+      <li><a href="camion-2.jpg" target="_blank" rel="noopener" aria-label="Apri foto: Operatori al lavoro con un camion autospurgo"><img src="camion-2.jpg" width="800" height="565" alt="Operatori al lavoro con un camion autospurgo" loading="lazy" decoding="async"></a></li>
+      <li><a href="camion-3.jpg" target="_blank" rel="noopener" aria-label="Apri foto: Camion autospurgo vicino a un lago"><img src="camion-3.jpg" width="1600" height="686" alt="Camion autospurgo vicino a un lago" loading="lazy" decoding="async"></a></li>
+    </ul>
     <div class="form-card" id="preventivo">
       <h2>Richiedi un preventivo gratuito</h2>
       <p class="sub">Compila i campi e continua su WhatsApp per richiedere il tuo preventivo.</p>
@@ -347,11 +352,6 @@
         <p class="form-note">Preferisci parlare subito? <a href="tel:+393286531658" class="js-call"><strong>Chiama 328 653 1658</strong></a></p>
       </form>
     </div>
-    <ul class="photo-strip" aria-label="Foto dei camion autospurgo">
-      <li><a href="camion-1.jpg" target="_blank" rel="noopener" aria-label="Apri foto: Camion autospurgo fotografato di notte in centro città"><img src="camion-1.jpg" width="1600" height="686" alt="Camion autospurgo fotografato di notte in centro città" loading="lazy" decoding="async"></a></li>
-      <li><a href="camion-2.jpg" target="_blank" rel="noopener" aria-label="Apri foto: Operatori al lavoro con un camion autospurgo"><img src="camion-2.jpg" width="800" height="565" alt="Operatori al lavoro con un camion autospurgo" loading="lazy" decoding="async"></a></li>
-      <li><a href="camion-3.jpg" target="_blank" rel="noopener" aria-label="Apri foto: Camion autospurgo vicino a un lago"><img src="camion-3.jpg" width="1600" height="686" alt="Camion autospurgo vicino a un lago" loading="lazy" decoding="async"></a></li>
-    </ul>
     </div>
   </div>
 </section>
